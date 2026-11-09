@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CEP</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=location_on" />
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <link rel="stylesheet" href="estilos/media.css">
+</head>
+<body>
+    <header>
+        <section id="titulo">
+            <span class="material-symbols-outlined icone">location_on</span>
+            <h1>Consulte seu CEP</h1>
+            <p>Encontre informações de endereço de forma rápida e segura</p>
+        </section>
+
+        <section id="entrada">
+            <label for="cep">
+                <p>Digite o CEP</p>
+                <input type="text" name="cep" id="cep" placeholder="00000000" inputmode="numeric" maxlength="8">
+            </label>
+            <button id="botao" onclick="buscarCeps()">Buscar CEP</button>
+        </section>
+    </header>
+
+    <main>
+        <section id="info">
+            <article id="titulo-info">
+                <span class="material-symbols-outlined icone">location_on</span>
+                <h2>Informações do endereço</h2>
+            </article>
+
+            <article id="texto-info">
+                <div class="dados">
+                    <h3>CEP</h3>
+                    <p id="numero"></p>
+                </div>
+                <div class="dados">
+                    <h3>Logradouro</h3>
+                    <p id="logadouro"></p>
+                </div>
+                <div class="dados">
+                    <h3>Cidade</h3>
+                    <p id="cidade"></p>
+                </div>
+                <div class="dados">
+                    <h3>Estado</h3>
+                    <p id="estado"></p>
+                </div>
+            </article>
+        </section>
+        <section id="tabela">
+            <table id="registros" >
+                <thead>
+                    <tr>
+                        <th>CEP</th>
+                        <th>Logadouro</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="corpo-tabela">
+                <!--
+                    <tr>
+                        <td>01310-100</td>
+                        <td>Avenida Paulista</td>
+                        <td>São Paulo</td>
+                        <td>SP</td>
+                    </tr>
+                    <tr>
+                        <td>89010-000</td>
+                        <td>Rua XV de Novembro</td>
+                        <td>Blumenau</td>
+                        <td>SC</td>
+                    </tr>
+                -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
